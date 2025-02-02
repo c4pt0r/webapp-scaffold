@@ -33,3 +33,9 @@
   
 
 ## Use this code base
+
+```
+pnpm install
+npm run dev
+```
+
