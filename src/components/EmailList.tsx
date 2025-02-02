@@ -2,9 +2,10 @@ import { Email } from '@/types/email';
 
 interface EmailListProps {
   emails: Email[];
+  onEmailSelect?: (email: Email) => void;
 }
 
-export default function EmailList({ emails }: EmailListProps) {
+export default function EmailList({ emails, onEmailSelect }: EmailListProps) {
   return (
     <div className="w-96 border-r overflow-auto">
       {emails.map((email) => (
@@ -13,6 +14,7 @@ export default function EmailList({ emails }: EmailListProps) {
           className={`border-b p-4 cursor-pointer hover:bg-gray-50 ${
             !email.read ? 'bg-blue-50' : ''
           }`}
+          onClick={() => onEmailSelect?.(email)}
         >
           <div className="flex items-center gap-3 mb-2">
             <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
