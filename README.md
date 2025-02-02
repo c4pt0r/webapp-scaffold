@@ -1,4 +1,3 @@
-
 1. **Create a New Next.js App with TypeScript, Tailwind CSS, and ESLint**
    ```bash
    npx create-next-app@latest myapp --typescript --tailwind --eslint
