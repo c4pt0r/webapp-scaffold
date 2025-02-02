@@ -29,4 +29,3 @@
    npm run dev
    ```
    - Runs the `dev` script defined in your `package.json`, which typically starts the Next.js development server. This allows you to view and test your application locally during development.
-   - 
