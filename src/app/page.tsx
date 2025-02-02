@@ -1,6 +1,7 @@
 "use client"
 import EmailLayout from '@/components/EmailLayout';
 import SearchBox from '@/components/SearchBox';
+import SearchHint from '@/components/SearchHint';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -58,6 +59,9 @@ export default function Home() {
 
   return (
     <main className="h-screen">
+      <SearchHint 
+        onOpenSearch={() => setIsSearchOpen(true)} 
+      />
       <SearchBox 
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
